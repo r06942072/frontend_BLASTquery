@@ -1,7 +1,6 @@
 import {
     FETCH_LIST,
     SET_LIST,
-    GET_LIST,
     SET_SEARCHBAR
 } from '../actions/types';
 
@@ -15,7 +14,7 @@ const initialState = {
     whichProgram: 'blastn'
 };
 
-export default (state = initialState, action) => {
+const formReducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH_LIST:
             return {
@@ -27,11 +26,6 @@ export default (state = initialState, action) => {
                 ...state,
                 allList: action.payload
             };
-        case GET_LIST:
-            return {
-                ...state,
-                allList: state.allList
-            };
         case SET_SEARCHBAR:
             return {
                 ...state,
@@ -41,3 +35,4 @@ export default (state = initialState, action) => {
             return state;
     }
 }
+export default formReducer;

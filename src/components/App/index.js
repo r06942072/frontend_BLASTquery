@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import {
 	fetchList,
 	setList,
-	getList,
 	setSearchbar
 } from '../../actions/formAction';
 
@@ -34,9 +33,8 @@ class App extends Component {
 		console.log('componentDidMount');
 		this.props.fetchList();
 	}
-	componentDidUpdate(prevProps, prevState) {
+	componentDidUpdate(prevProps, prevState, snapshot) {
 		console.log('componentDidUpdate');
-		//console.log(prevProps);
 	}
 	//YourQuery section
 
@@ -156,7 +154,6 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = {
 	fetchList,
 	setList,
-	getList,
 	setSearchbar
 };
 
