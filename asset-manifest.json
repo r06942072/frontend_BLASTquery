@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/frontend_BLASTquery/static/js/main.0001e93e.chunk.js",
-    "main.js.map": "/frontend_BLASTquery/static/js/main.0001e93e.chunk.js.map",
-    "runtime~main.js": "/frontend_BLASTquery/static/js/runtime~main.8d19b23a.js",
-    "runtime~main.js.map": "/frontend_BLASTquery/static/js/runtime~main.8d19b23a.js.map",
-    "static/js/2.d6a534e5.chunk.js": "/frontend_BLASTquery/static/js/2.d6a534e5.chunk.js",
-    "static/js/2.d6a534e5.chunk.js.map": "/frontend_BLASTquery/static/js/2.d6a534e5.chunk.js.map",
-    "index.html": "/frontend_BLASTquery/index.html",
-    "precache-manifest.0d158ea67d9e98d19116a49072850b96.js": "/frontend_BLASTquery/precache-manifest.0d158ea67d9e98d19116a49072850b96.js",
-    "service-worker.js": "/frontend_BLASTquery/service-worker.js"
+    "main.js": "/BLASTquery/static/js/main.7116fd1d.chunk.js",
+    "main.js.map": "/BLASTquery/static/js/main.7116fd1d.chunk.js.map",
+    "runtime~main.js": "/BLASTquery/static/js/runtime~main.9a53abef.js",
+    "runtime~main.js.map": "/BLASTquery/static/js/runtime~main.9a53abef.js.map",
+    "static/js/2.e0d10cd8.chunk.js": "/BLASTquery/static/js/2.e0d10cd8.chunk.js",
+    "static/js/2.e0d10cd8.chunk.js.map": "/BLASTquery/static/js/2.e0d10cd8.chunk.js.map",
+    "index.html": "/BLASTquery/index.html",
+    "precache-manifest.adf48244cfc19049433f29dd729bfde9.js": "/BLASTquery/precache-manifest.adf48244cfc19049433f29dd729bfde9.js",
+    "service-worker.js": "/BLASTquery/service-worker.js"
   }
 }
