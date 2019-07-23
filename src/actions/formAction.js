@@ -1,5 +1,6 @@
 import { Actions } from './types';
 
+//fetch data from remote url
 export const fetchList = () => dispatch => {
     dispatch({
         type: Actions.FETCH_LIST,
@@ -10,21 +11,9 @@ export const fetchList = () => dispatch => {
         ]
     })
 }
-export const getStorage = () => dispatch => {
-    dispatch({
-        type: Actions.GET_STORAGE,
-        payload: 'ss'
-    })
-}
 export const setList = (res) => dispatch => {
     dispatch({
         type: Actions.SET_LIST,
-        payload: res
-    })
-}
-export const setSearchbar = (res) => dispatch => {
-    dispatch({
-        type: Actions.SET_SEARCHBAR,
         payload: res
     })
 }

@@ -3,6 +3,8 @@ import formReducer from './formReducer';
 
 //const undoableReducer = undoable(formReducer);
 
-export default combineReducers({
+const rootReducer = combineReducers({
     formState: formReducer
 });
+
+export default rootReducer;

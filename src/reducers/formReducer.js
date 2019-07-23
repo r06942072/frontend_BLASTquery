@@ -1,7 +1,6 @@
 import { Actions } from '../actions/types';
 
 const initialState = {
-    searchbarText: '',
     allList: [
         { "id": 11, "fullName": "PleaseFetchDataFromRemote", "isChecked": false },
         { "id": 22, "fullName": "reducer/formReducer.js", "isChecked": false },
@@ -21,11 +20,6 @@ const formReducer = (state = initialState, action) => {
             return {
                 ...state,
                 allList: action.payload
-            };
-        case Actions.SET_SEARCHBAR:
-            return {
-                ...state,
-                searchbarText: action.payload
             };
         default:
             return state;
