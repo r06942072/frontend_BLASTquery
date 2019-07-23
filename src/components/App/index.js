@@ -3,7 +3,6 @@ import { PropTypes } from "prop-types";
 
 import { connect } from 'react-redux';
 import {
-	fetchList,
 	setList,
 	setSearchbar
 } from '../../actions/formAction';
@@ -19,6 +18,7 @@ import OptionTblastn from "../Program/ChooseProgram/presentation"
 import OptionTblastx from "../Program/ChooseProgram/presentation"
 import OptionBlastp from "../Program/ChooseProgram/presentation"
 import OptionBlastx from "../Program/ChooseProgram/presentation"
+import TimeTravel from '../TimeTravel/index'
 
 //import Program from '../Program';
 //import ResetSubmit from '../ResetSubmit';
@@ -31,10 +31,15 @@ class App extends Component {
 	*/
 	componentDidMount() {
 		console.log('componentDidMount');
-		this.props.fetchList();
 	}
 	componentDidUpdate(prevProps, prevState, snapshot) {
 		console.log('componentDidUpdate');
+		/*
+		localStorage.setItem('myData', this.props.searchbarText);
+		console.log('ddd');
+		*/
+		let retrieved = localStorage.getItem('reduxState');
+		console.log(retrieved);
 	}
 	//YourQuery section
 
@@ -52,7 +57,6 @@ class App extends Component {
 		this.forceUpdate();
 	}
 	_handleCheckboxChange = (event) => {
-		
 		let newList = this.props.allList;
 		newList.forEach((res) => {
 			if (res.fullName === event.target.name) {
@@ -112,7 +116,7 @@ class App extends Component {
 		return Program;
 	}
 	render() {
-		console.log(this.props);
+		console.log('render');
 		return (
 			<div>
 				<h1>YourQuery</h1>
@@ -135,7 +139,10 @@ class App extends Component {
 				<p>----------------------------------------</p>
 				<h1>Program</h1>
 				<p>----------------------------------------</p>
-				<h1>ResetSubmit</h1>
+				<h1>TimeTravel</h1>
+				<TimeTravel />
+				<p>----------------------------------------</p>
+				<br />
 			</div>
 		);
 	}
@@ -152,7 +159,6 @@ const mapStateToProps = (state) => ({
 
 //bundle actionCreators together
 const mapDispatchToProps = {
-	fetchList,
 	setList,
 	setSearchbar
 };

@@ -1,12 +1,8 @@
-import {
-    FETCH_LIST,
-    SET_LIST,
-    SET_SEARCHBAR
-} from './types';
+import { Actions } from './types';
 
 export const fetchList = () => dispatch => {
     dispatch({
-        type: FETCH_LIST,
+        type: Actions.FETCH_LIST,
         payload: [
             { "id": 1, "fullName": "Aethina tumdia", "isChecked": false },
             { "id": 2, "fullName": "Bombus terrestis", "isChecked": false },
@@ -14,15 +10,21 @@ export const fetchList = () => dispatch => {
         ]
     })
 }
+export const getStorage = () => dispatch => {
+    dispatch({
+        type: Actions.GET_STORAGE,
+        payload: 'ss'
+    })
+}
 export const setList = (res) => dispatch => {
     dispatch({
-        type: SET_LIST,
+        type: Actions.SET_LIST,
         payload: res
     })
 }
 export const setSearchbar = (res) => dispatch => {
     dispatch({
-        type: SET_SEARCHBAR,
+        type: Actions.SET_SEARCHBAR,
         payload: res
     })
 }

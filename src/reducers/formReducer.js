@@ -1,8 +1,4 @@
-import {
-    FETCH_LIST,
-    SET_LIST,
-    SET_SEARCHBAR
-} from '../actions/types';
+import { Actions } from '../actions/types';
 
 const initialState = {
     searchbarText: '',
@@ -16,17 +12,17 @@ const initialState = {
 
 const formReducer = (state = initialState, action) => {
     switch (action.type) {
-        case FETCH_LIST:
+        case Actions.FETCH_LIST:
             return {
                 ...state,
                 allList: action.payload
             };
-        case SET_LIST:
+        case Actions.SET_LIST:
             return {
                 ...state,
                 allList: action.payload
             };
-        case SET_SEARCHBAR:
+        case Actions.SET_SEARCHBAR:
             return {
                 ...state,
                 searchbarText: action.payload
