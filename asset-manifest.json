@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/frontend_BLASTquery/static/js/main.7116fd1d.chunk.js",
-    "main.js.map": "/frontend_BLASTquery/static/js/main.7116fd1d.chunk.js.map",
+    "main.js": "/frontend_BLASTquery/static/js/main.2c23e498.chunk.js",
+    "main.js.map": "/frontend_BLASTquery/static/js/main.2c23e498.chunk.js.map",
     "runtime~main.js": "/frontend_BLASTquery/static/js/runtime~main.8d19b23a.js",
     "runtime~main.js.map": "/frontend_BLASTquery/static/js/runtime~main.8d19b23a.js.map",
-    "static/js/2.e0d10cd8.chunk.js": "/frontend_BLASTquery/static/js/2.e0d10cd8.chunk.js",
-    "static/js/2.e0d10cd8.chunk.js.map": "/frontend_BLASTquery/static/js/2.e0d10cd8.chunk.js.map",
+    "static/js/2.f9238882.chunk.js": "/frontend_BLASTquery/static/js/2.f9238882.chunk.js",
+    "static/js/2.f9238882.chunk.js.map": "/frontend_BLASTquery/static/js/2.f9238882.chunk.js.map",
     "index.html": "/frontend_BLASTquery/index.html",
-    "precache-manifest.7b54b29e2e85ce08ad7990e929360e5a.js": "/frontend_BLASTquery/precache-manifest.7b54b29e2e85ce08ad7990e929360e5a.js",
+    "precache-manifest.da0008d64b9caa1fd64156843c43acd3.js": "/frontend_BLASTquery/precache-manifest.da0008d64b9caa1fd64156843c43acd3.js",
     "service-worker.js": "/frontend_BLASTquery/service-worker.js"
   }
 }
