@@ -22,9 +22,4 @@ const store = createStore(
     storeEnhancer
 );
 
-/*
-console.log('This is a store:');
-console.log(store.getState());
-*/
-
 export default store;

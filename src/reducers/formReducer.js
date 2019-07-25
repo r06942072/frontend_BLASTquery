@@ -3,7 +3,7 @@ import { Actions } from '../actions/types';
 const initialState = {
     allList: [
         { "id": 11, "fullName": "PleaseFetchDataFromRemote", "isChecked": false },
-        { "id": 22, "fullName": "reducer/formReducer.js", "isChecked": false },
+        { "id": 22, "fullName": "Error", "isChecked": false },
         { "id": 33, "fullName": "Chun-Hung", "isChecked": false }
     ],
     whichProgram: 'blastn'
@@ -20,6 +20,11 @@ const formReducer = (state = initialState, action) => {
             return {
                 ...state,
                 allList: action.payload
+            };
+        case Actions.SET_PROGRAM:
+            return {
+                ...state,
+                whichProgram: action.payload
             };
         default:
             return state;

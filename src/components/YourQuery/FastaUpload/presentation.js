@@ -3,7 +3,12 @@ import React from 'react';
 function FastaUpload(props) {
     return (
         <div>
-            <input type="submit" value="Choose File" />
+            <p>*FastaUpload</p>
+            <form>
+                <input
+                    type="file"
+                />
+            </form>
         </div>
     );
 }

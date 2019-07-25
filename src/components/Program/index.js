@@ -1,52 +1,64 @@
 //Program
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {
+	setProgram
+} from '../../actions/formAction';
+
+import ChooseProgram from './ChooseProgram/presentation';
+import OptionBlastn from './OptionBlastn/presentation';
+import OptionTblastn from './OptionTblastn/presentation';
 
 class Program extends Component {
-    componentDidMount() {
-    }
-    /*
-    //Program section
+	componentDidMount() {
+	}
+	_handleRadioButton = (res) => {
+		this.props.setProgram(res.target.value);
+	}
+	_handleProgram = (res) => {
+		console.log(res.target.value);
+	}
+	//Program section
 	_renderProgram = (res) => {
 		let Program;
 		switch (res) {
-			case 1:
-				Program = <FastaTextbox />;
+			case 'blastn':
+				Program = <OptionBlastn handleProgram={this._handleProgram}/>;
 				break;
-			case 2:
-				Program = <FastaUpload />;
+			case 'tblastn':
+				Program = <OptionTblastn handleProgram={this._handleProgram}/>;
 				break;
-			case 3:
+			case 'tblastx':
 				break;
-			case 4:
+			case 'blastp':
 				break;
-			case 5:
+			case 'blastx':
 				break;
 			default:
-				Program = <FastaTextbox />;
+				Program = <OptionBlastn />;
 		}
 		return Program;
-    }
-    */
-    render() {
-        return (
-            <div>
-                <p>*.....</p>
-            </div>
-        );
-    }
+	}
+	render() {
+		return (
+			<div>
+				<ChooseProgram
+					handleRadioButton={this._handleRadioButton}
+				/>
+				{this._renderProgram(this.props.whichProgram)}
+			</div>
+		);
+	}
 }
 
 const mapStateToProps = (state) => ({
-	searchbarText: state.formState.searchbarText,
-	allList: state.formState.allList
+	allList: state.formState.allList,
+	whichProgram: state.formState.whichProgram
 });
 
 //bundle actionCreators together
 const mapDispatchToProps = {
-	fetchList,
-	setList,
-	setSearchbar
+	setProgram
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Program);

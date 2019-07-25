@@ -6,15 +6,10 @@ import {
 
 import YourQuery from '../YourQuery';
 import OurDb from '../OurDb';
-//import Program from '../Program';
+import Program from '../Program';
 import TimeTravel from '../TimeTravel';
-//import axios from "axios";
 
 class App extends Component {
-	/*
-	componentWillMount() {	
-	}
-	*/
 	componentDidMount() {
 		console.log('App componentDidMount');
 		if (localStorage.getItem('reduxState') === null) {
@@ -25,10 +20,11 @@ class App extends Component {
 		console.log('App componentDidUpdate');
 	}
 	render() {
-		console.log('render');
+		console.log('App render');
 		return (
 			<div>
 				<h1>YourQuery</h1>
+				<YourQuery />
 				<br />
 				<p>----------------------------------------</p>
 				<h1>OurDb</h1>
@@ -36,6 +32,7 @@ class App extends Component {
 				<br />
 				<p>----------------------------------------</p>
 				<h1>Program</h1>
+				<Program />
 				<p>----------------------------------------</p>
 				<h1>TimeTravel</h1>
 				<TimeTravel />

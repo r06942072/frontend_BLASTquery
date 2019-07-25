@@ -1,4 +1,5 @@
 import { Actions } from './types';
+//import axios from "axios";
 
 //fetch data from remote url
 export const fetchList = () => dispatch => {
@@ -14,6 +15,12 @@ export const fetchList = () => dispatch => {
 export const setList = (res) => dispatch => {
     dispatch({
         type: Actions.SET_LIST,
+        payload: res
+    })
+}
+export const setProgram = (res) => dispatch => {
+    dispatch({
+        type: Actions.SET_PROGRAM,
         payload: res
     })
 }

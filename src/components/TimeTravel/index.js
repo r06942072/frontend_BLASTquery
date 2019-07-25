@@ -1,16 +1,24 @@
 //TimeTravel
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Submit from "./Submit/presentation";
+
+import Reset from './Reset/presentation'
+import Submit from './Submit/presentation';
 
 class TimeTravel extends Component {
     componentDidMount() {
+    }
+    _handleReset = () => {
+        console.log('handleReset');
     }
     _handleSubmit = () => {
     }
     render() {
         return (
             <div>
+                <Reset
+                    handleReset={this._handleReset}
+                />
                 <Submit
                 />
             </div>
@@ -18,7 +26,7 @@ class TimeTravel extends Component {
     }
 }
 
-const mapStateToProps = (state) => ({  
+const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
