@@ -11,15 +11,21 @@ if (localStorage.getItem('reduxState') !== null) {
 
 const middleware = [thunk];
 
-const storeEnhancer = compose(
+const composeEnhancers =
+    typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
+        window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+            // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
+        }) : compose;
+
+const rootEnhancer = composeEnhancers(
     applyMiddleware(...middleware),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    // other store enhancers if any
 );
 
 const store = createStore(
     rootReducer,
     persistedState,
-    storeEnhancer
+    rootEnhancer
 );
 
 export default store;
