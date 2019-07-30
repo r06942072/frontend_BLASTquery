@@ -1,7 +1,7 @@
 # User Guide
 ### Prerequisites
-node js
-npm
+node js  
+npm  
 yarn (optional)
 
 ### How to spin up the project on local machine
